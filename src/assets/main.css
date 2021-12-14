@@ -1,3 +1,52 @@
 #app {
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* RESPONSIVE CSS */
+@media screen and (max-width: 767px) {
+    .mobile-col {
+        margin-bottom: 3em;
+    }
+
+    .mobile-space {
+
+        margin-bottom: 1em;
+    }
+
+    .mobile-space2 {
+        text-align: left;
+    }
+
+    .carousel-item {
+        height: 10em;
+        background-color: #777;
+    }
+
+    .carousel-item>img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        height: auto;
+    }
+
+    .caption-text {
+        display: none;
+    }
+
+    .covid-notice {
+        font-size: 10pt;
+        margin-left: 2px;
+    }
+
+    .mobile-hidden {
+        display: none;
+    }
+
+    .bannerjob .carousel-item {
+        height: 10rem;
+        background-color: #777;
+    }
+
 }

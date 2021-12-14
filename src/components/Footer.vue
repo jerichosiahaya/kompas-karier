@@ -6,27 +6,27 @@
         <!--Grid row-->
         <div class="row">
           <!--Grid column-->
-          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Footer text</h5>
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0" style="text-align: left">
+            <h5 class="text-uppercase">Harian Kompas</h5>
 
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
-              atque ea quis molestias. Fugiat pariatur maxime quis culpa
-              corporis vitae repudiandae aliquam voluptatem veniam, est atque
-              cumque eum delectus sint!
+              Telp: (021) 25676000 <br />
+              Email: hotline@kompas.id <br />
+              Lokasi: Jl. Palmerah Selatan 26-28
             </p>
           </div>
           <!--Grid column-->
 
           <!--Grid column-->
-          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Footer text</h5>
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0" style="text-align: left">
+            <h5 class="text-uppercase">Tentang Kami</h5>
 
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
-              atque ea quis molestias. Fugiat pariatur maxime quis culpa
-              corporis vitae repudiandae aliquam voluptatem veniam, est atque
-              cumque eum delectus sint!
+              Harian Kompas adalah surat kabar Indonesia yang berkantor pusat di
+              Jakarta. Kompas diterbitkan oleh PT Kompas Media Nusantara yang
+              merupakan bagian dari kelompok usaha Kompas Gramedia (KG), yang
+              didirikan oleh P.K. Ojong (almarhum) dan Jakob Oetama (almarhum)
+              sejak 28 Juni 1965.
             </p>
           </div>
           <!--Grid column-->
@@ -37,7 +37,7 @@
 
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © {{ new Date().getFullYear() }} Copyright | Kompas
+        © {{ new Date().getFullYear() }} Copyright | Kompas Karier
       </div>
       <!-- Copyright -->
     </footer>

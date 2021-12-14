@@ -1,7 +1,16 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="dark">
-      <b-navbar-brand to="/">KompasKarier</b-navbar-brand>
+      <b-navbar-brand to="/">
+        <img
+          src="assets/images/logo_kompas.png/"
+          alt=""
+          width="30"
+          height="30"
+          class="justify-content-center mr-2"
+        />
+        Kompas Karier</b-navbar-brand
+      >
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 

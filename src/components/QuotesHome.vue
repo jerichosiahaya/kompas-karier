@@ -2,7 +2,7 @@
   <div>
     <div class="quotes">
       <div class="row">
-        <div class="col justify-content-center align-self-center ml-4">
+        <div class="col justify-content-center align-self-center">
           <h3>
             <i
               >"Dengan bekerja tidak maksimal, kita sendiri mendegradasi talenta
@@ -12,7 +12,7 @@
           <br />
           <p>— Jakob Oetama</p>
         </div>
-        <div class="col mr-3">
+        <div class="col mr-3 mobile-hidden">
           <img
             class="jakob-oetama"
             src="https://bernasnews.com/wp-content/uploads/2020/09/0909jakob-oetama.jpg"
@@ -25,7 +25,7 @@
     <div class="vision container">
       <hr />
       <br />
-      <h3>Our Vision</h3>
+      <h3><b>Our Vision</b></h3>
       <br />
       <p>
         Menjadi Perusahaan yang terbesar, terbaik, terpadu, dan tersebar di Asia
@@ -36,7 +36,7 @@
     <div class="container">
       <hr />
     </div>
-    <div class="testimony">
+    <div class="testimony mobile-hidden">
       <b-carousel
         id="carousel-no-animation"
         style="background-color: white"

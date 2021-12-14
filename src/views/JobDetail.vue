@@ -2,17 +2,25 @@
   <div class="jobdetail">
     <BannerJob />
     <div class="container jobTitle">
-      <h3>{{ job.title }}</h3>
+      <h3>
+        <b> {{ job.title }}</b>
+      </h3>
       <p>{{ job.type }}</p>
       <hr />
-      <p>Lorem Ipsum</p>
-      <h5>Job Summary</h5>
+      <p>
+        Kompas is a mission-driven company dedicated to helping create a world
+        where anyone can belong anywhere. It takes a unified team committed to
+        our core values to achieve this goal. Airbnb's various functions embody
+        the company's innovative spirit and our fast-moving team is committed to
+        leading as a 21st century company.
+      </p>
+      <h5><b>Job Summary</b></h5>
       <p>{{ job.summary }}</p>
-      <h5>Duties & Responsibilities</h5>
+      <h5><b>Duties & Responsibilities</b></h5>
       <p v-html="jobDuties"></p>
-      <h5>Requirements & Qualifications</h5>
+      <h5><b>Requirements & Qualifications</b></h5>
       <p v-html="jobReq"></p>
-
+      <br />
       <div class="row applyButton">
         <div class="col-md-auto mb-2">
           <b-button to="/job" variant="dark">←</b-button>

@@ -1,4 +1,9 @@
-# kompas-karier
+# Kompas Karier 📝
+
+> This is only a dummy website, purposely made it as an candidate assignment on Kompas Internship recruitment 2021/2022
+
+
+
 
 ## Project setup
 ```

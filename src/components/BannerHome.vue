@@ -5,22 +5,22 @@
       id="carousel-no-animation"
       style="text-shadow: 0px 0px 2px #000"
       indicators
-      img-width="900"
-      img-height="100"
+      img-width="1024"
+      img-height="480"
     >
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=52">
+      <b-carousel-slide img-src="assets/images/banner1.jpg/">
         <div class="caption-text">
           <h2>Do what you love</h2>
           <p>Create the future you want</p>
-          <b-button variant="primary">Find Jobs</b-button>
+          <b-button variant="primary" to="/job">Find Jobs</b-button>
         </div>
       </b-carousel-slide>
 
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=51">
+      <b-carousel-slide img-src="assets/images/banner2.jpg/">
         <div class="caption-text">
-          <h2>Do what you love</h2>
-          <p>Create the future you want</p>
-          <b-button variant="primary">Find Jobs</b-button>
+          <h2>Finding your passion</h2>
+          <p>Believe in your dreams</p>
+          <b-button variant="primary" to="/job">Explore Opportunities</b-button>
         </div>
       </b-carousel-slide>
     </b-carousel>
@@ -38,7 +38,7 @@ export default {
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 32rem;
+  height: 31rem;
   background-color: #777;
 }
 .carousel-item > img {
@@ -46,13 +46,27 @@ export default {
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 32rem;
+  height: auto;
 }
 
 .caption-text {
   text-align: left;
   position: relative;
   bottom: 8em;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+.btn.btn-primary:active,
+.btn.btn-primary.active {
+  background-color: #013a66;
+  border-color: #013a66;
+}
+
+.btn.btn-primary {
+  color: #ffffff;
+  background-color: #005596;
+  border-color: #005596;
 }
 
 .carousel-control-next-icon,
