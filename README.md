@@ -21,6 +21,12 @@ Despite it didn't mention, whether the website should displayed hardcoded data o
 | `api/rest/jobs/title/:title` | `GET`  |
 
 
+------------
+
+
+[![](https://github.com/jerichosiahaya/kompas-karier/blob/main/public/assets/ui.gif)](https://github.com/jerichosiahaya/kompas-karier/blob/main/public/assets/ui.gif)
+
+
 #### Some of the features that I don't get to finish
 - **Filter by**, By lack of time and lack of finding the documentation, I couldn't get to make the filter by works. User only can search the job by position using the search box. Maybe if I have more time, I can make it works.
 - **Apply manual**, I want to make another page so user can fill the data within the input group then submit. The data would be inserted into database through API. 
