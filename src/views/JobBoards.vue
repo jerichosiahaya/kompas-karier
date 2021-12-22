@@ -6,35 +6,32 @@
     </div>
     <br />
     <div class="container">
-      <div class="row mobile-space2">
+      <div class="row mobile-space">
         <div class="col-md-2 mobile-space">
           <div>
-            <b-dropdown id="dropdown-1" text="Filter: Job Type">
-              <b-dropdown-item>First Action</b-dropdown-item>
-              <b-dropdown-item>Second Action</b-dropdown-item>
-              <b-dropdown-item>Third Action</b-dropdown-item>
-            </b-dropdown>
+            <b-form-select
+              v-model="jobTypeFilter"
+              :options="jobType"
+            ></b-form-select>
           </div>
         </div>
         <div class="col-md-2 mobile-space">
           <div>
-            <b-dropdown id="dropdown-1" text="Filter: Division">
-              <b-dropdown-item>First Action</b-dropdown-item>
-              <b-dropdown-item>Second Action</b-dropdown-item>
-              <b-dropdown-item>Third Action</b-dropdown-item>
-            </b-dropdown>
+            <b-form-select
+              v-model="divisionFilter"
+              :options="divisionOpt"
+            ></b-form-select>
           </div>
         </div>
         <div class="col-md-4">
           <div class="input-group">
             <input
-              v-model="title"
+              v-model="search"
               type="text"
               class="form-control"
               placeholder="Search role..."
               aria-label="Search role..."
               aria-describedby="basic-addon1"
-              v-on:keyup.enter="searchJob()"
             />
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1"
@@ -43,6 +40,9 @@
             </div>
           </div>
         </div>
+        <div class="col-md-2">
+          <b-button @click="reloadPage">Clear Filter</b-button>
+        </div>
       </div>
     </div>
 
@@ -50,7 +50,11 @@
 
     <div class="container">
       <div class="row mb-4">
-        <div class="col-md-4 mt-4" v-for="job in jobs" :key="job.id">
+        <div
+          class="col-md-4 mt-4"
+          v-for="job in filteredAndSorted"
+          :key="job.id"
+        >
           <JobItem :job="job" />
         </div>
       </div>
@@ -70,12 +74,47 @@ export default {
   },
   data() {
     return {
+      divisionFilter: "",
+      jobTypeFilter: "",
+      search: "",
       jobs: [],
       title: "",
       filter: null,
+      jobType: [
+        { value: "Full-Time", text: "Full-Time" },
+        { value: "Intern", text: "Internship" },
+      ],
+      divisionOpt: [
+        { value: "Information Technology", text: "Information Technology" },
+        { value: "Management", text: "Management" },
+        { value: "Marketing", text: "Marketing" },
+      ],
     };
   },
+  computed: {
+    filteredAndSorted() {
+      function compare(a, b) {
+        if (a.title < b.title) return -1;
+        if (a.title > b.title) return 1;
+        return 0;
+      }
+      return this.jobs
+        .filter((job) => {
+          let result =
+            job.title.toLowerCase().includes(this.search.toLowerCase()) &&
+            job.division
+              .toLowerCase()
+              .includes(this.divisionFilter.toLowerCase()) &&
+            job.type.toLowerCase().includes(this.jobTypeFilter.toLowerCase());
+          return result;
+        })
+        .sort(compare);
+    },
+  },
   methods: {
+    reloadPage() {
+      window.location.reload();
+    },
     setJobs(data) {
       this.jobs = data;
     },
