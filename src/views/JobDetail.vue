@@ -26,7 +26,9 @@
           <b-button to="/job" variant="dark">←</b-button>
         </div>
         <div class="col-md-auto mb-2">
-          <b-button to="/jobdetail" variant="success">Apply Manual</b-button>
+          <b-button :to="'/job/apply/' + jobId" variant="success"
+            >Apply Manual</b-button
+          >
         </div>
         <div class="col-md-auto mb-2">
           <b-button to="/jobdetail" variant="primary"
@@ -50,13 +52,15 @@ export default {
       job: {},
       jobReq: null,
       jobDuties: null,
+      jobId: null,
     };
   },
   methods: {
     setJobs(data) {
       (this.job = data),
         (this.jobReq = data.req),
-        (this.jobDuties = data.duties_res);
+        (this.jobDuties = data.duties_res),
+        (this.jobId = data.id);
     },
   },
   mounted() {
