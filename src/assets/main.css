@@ -18,6 +18,10 @@
         text-align: left;
     }
 
+    .mobile-space3 {
+        margin-top: 1em;
+    }
+
     .carousel-item {
         height: 10em;
         background-color: #777;

@@ -40,7 +40,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-auto mobile-space3">
           <b-button @click="reloadPage">Clear Filter</b-button>
         </div>
       </div>
