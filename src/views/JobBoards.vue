@@ -81,10 +81,12 @@ export default {
       title: "",
       filter: null,
       jobType: [
+        { value: "", text: "Filter: Type", disabled: true },
         { value: "Full-Time", text: "Full-Time" },
         { value: "Intern", text: "Internship" },
       ],
       divisionOpt: [
+        { value: "", text: "Filter: Division", disabled: true },
         { value: "Information Technology", text: "Information Technology" },
         { value: "Management", text: "Management" },
         { value: "Marketing", text: "Marketing" },

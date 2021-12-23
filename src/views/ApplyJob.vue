@@ -92,6 +92,7 @@ export default {
         (this.jobDuties = data.duties_res);
     },
     setUploadedFile(data) {
+      if (data != null) alert("Upload success");
       this.uploadedFile = data;
     },
     appliedJob() {
@@ -111,7 +112,7 @@ export default {
             },
           }
         )
-        .then(() => console.log("Success"))
+        .then(() => alert("Success"))
         .catch((error) => console.log(error));
     },
     uploadFile() {
